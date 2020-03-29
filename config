@@ -1,0 +1,9 @@
+SSH_USER="michal"
+SSH_HOST="screens.tallica.pl"
+SSH_PORT="60022"
+
+# No "/" at the end
+LOCAL_DIR_PATH="/Users/michal/Pictures/Screenshots"
+REMOTE_DIR_PATH="/home/michal/Screenshots"
+
+HTTP_HOST="https://s.tallica.pl"
