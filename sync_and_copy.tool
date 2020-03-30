@@ -5,9 +5,9 @@ source ./config
 SOURCE_FILE="${1}"
 FILE_EXT="${SOURCE_FILE##*.}"
 
-SHASUM=$(shasum "${SOURCE_FILE}" | awk '{ print $1 }')
+UUID=$(uuidgen | tr -d '\n-' | tr '[:upper:]' '[:lower:]')
 
-REMOTE_FILE_NAME="${SHASUM}.${FILE_EXT}"
+REMOTE_FILE_NAME="${UUID}.${FILE_EXT}"
 REMOTE_URL="${HTTP_HOST}/${REMOTE_FILE_NAME}"
 
 echo "${REMOTE_URL}" | pbcopy && \
